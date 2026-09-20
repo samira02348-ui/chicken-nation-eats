@@ -38,13 +38,13 @@ function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Logo />
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="-mr-1 flex items-center gap-0.5 sm:gap-2">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: link.to === "/" }}
-              className="rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:bg-secondary data-[status=active]:text-foreground"
+              className="rounded-full px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground data-[status=active]:bg-secondary data-[status=active]:text-foreground sm:px-3"
             >
               {link.label}
             </Link>
