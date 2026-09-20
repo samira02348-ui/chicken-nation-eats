@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
         content:
           "Bamenda's favourite fried chicken. Combo 8, hot wings, burgers and more. Open daily until midnight.",
       },
-et    ],
+    ],
   }),
   component: Index,
 });
