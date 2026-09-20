@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Flame, Zap, Heart } from "lucide-react";
 import heroChicken from "@/assets/hero-chicken.jpg";
 
 export const Route = createFileRoute("/about")({
@@ -25,17 +26,17 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   {
-    icon: "🔥",
+    Icon: Flame,
     title: "Fresh off the fryer",
     text: "Every piece is breaded and cooked to order — never sitting around under a lamp.",
   },
   {
-    icon: "⚡",
+    Icon: Zap,
     title: "Fast, every time",
     text: "Call ahead, grab it on the go, or have it delivered hot to your door.",
   },
   {
-    icon: "💛",
+    Icon: Heart,
     title: "Friendly & fair",
     text: "Great customer care and prices that respect your pocket. Combo 8 says it all.",
   },
@@ -72,14 +73,14 @@ function AboutPage() {
               Why people <span className="gold-gradient-text">keep coming back</span>
             </h2>
             <div className="mt-8 space-y-6">
-              {values.map((v) => (
-                <div key={v.title} className="flex gap-4">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-xl">
-                    {v.icon}
+              {values.map(({ Icon, title, text }) => (
+                <div key={title} className="flex gap-4">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-secondary text-gold">
+                    <Icon className="size-5" />
                   </span>
                   <div>
-                    <h3 className="font-semibold">{v.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{v.text}</p>
+                    <h3 className="font-semibold">{title}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{text}</p>
                   </div>
                 </div>
               ))}

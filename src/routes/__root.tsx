@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import logo from "@/assets/logo.png";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -15,8 +16,8 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 function Logo() {
   return (
     <Link to="/" className="group flex items-center gap-2.5">
-      <span className="ember-gradient flex size-9 items-center justify-center rounded-xl text-lg shadow-[var(--shadow-ember)] transition-transform group-hover:rotate-6">
-        🍗
+      <span className="ember-gradient flex size-9 items-center justify-center overflow-hidden rounded-xl shadow-[var(--shadow-ember)] transition-transform group-hover:rotate-6">
+        <img src={logo} alt="" width={36} height={36} className="size-full object-cover" />
       </span>
       <span className="font-display text-sm leading-none tracking-wide uppercase sm:text-base">
         Chicken<span className="gold-gradient-text"> Nation</span>

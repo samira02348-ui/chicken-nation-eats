@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { UtensilsCrossed, ShoppingBag, Bike, Moon } from "lucide-react";
 import heroChicken from "@/assets/hero-chicken.jpg";
 import comboPlatter from "@/assets/combo-platter.jpg";
 import chickenBurger from "@/assets/chicken-burger.jpg";
@@ -126,14 +127,14 @@ function Index() {
       <section className="border-y border-border bg-card/60">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 text-center sm:grid-cols-4 sm:px-6">
           {[
-            { icon: "🍽️", label: "Dine-in" },
-            { icon: "🥡", label: "Takeaway" },
-            { icon: "🛵", label: "Delivery" },
-            { icon: "🌙", label: "Open till midnight" },
-          ].map((s) => (
-            <div key={s.label} className="flex flex-col items-center gap-1.5">
-              <span className="text-2xl">{s.icon}</span>
-              <span className="text-sm font-medium">{s.label}</span>
+            { Icon: UtensilsCrossed, label: "Dine-in" },
+            { Icon: ShoppingBag, label: "Takeaway" },
+            { Icon: Bike, label: "Delivery" },
+            { Icon: Moon, label: "Open till midnight" },
+          ].map(({ Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-1.5">
+              <Icon className="size-6 text-gold" />
+              <span className="text-sm font-medium">{label}</span>
             </div>
           ))}
         </div>

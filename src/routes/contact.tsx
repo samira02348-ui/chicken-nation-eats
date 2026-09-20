@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -47,7 +48,7 @@ function ContactPage() {
             rel="noreferrer"
             className="rounded-3xl border border-border bg-card p-7 transition-transform hover:-translate-y-1"
           >
-            <span className="text-2xl">📍</span>
+            <MapPin className="size-6 text-gold" />
             <h2 className="font-display mt-3 text-base">Address</h2>
             <p className="mt-2 text-sm text-muted-foreground">
               X5CF+FJR, Foncha St
@@ -60,7 +61,7 @@ function ContactPage() {
             href="tel:+237671648900"
             className="rounded-3xl border border-border bg-card p-7 transition-transform hover:-translate-y-1"
           >
-            <span className="text-2xl">📞</span>
+            <Phone className="size-6 text-gold" />
             <h2 className="font-display mt-3 text-base">Call to order</h2>
             <p className="mt-2 text-sm text-muted-foreground">
               +237 6 71 64 89 00
@@ -70,7 +71,7 @@ function ContactPage() {
             <p className="mt-3 text-sm font-semibold text-gold">Tap to call →</p>
           </a>
           <div className="rounded-3xl border border-border bg-card p-7">
-            <span className="text-2xl">🕒</span>
+            <Clock className="size-6 text-gold" />
             <h2 className="font-display mt-3 text-base">Opening hours</h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Every day
